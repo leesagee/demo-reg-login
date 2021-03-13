@@ -1,13 +1,20 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
+  "compileOnSave": false,
   "compilerOptions": {
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true,
-      "target": "ES5",
-      "baseUrl": "src",
-      "paths": {
-          "@/*": [
-              "app/*"
-          ]
-      }
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": "src",
+    "target": "ES5",
+    // "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+        "@/*": [
+            "app/*"
+        ]
+    }
   }
 }

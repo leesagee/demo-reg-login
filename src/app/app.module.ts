@@ -9,15 +9,18 @@ import { HomeComponent } from './page_components/home/home.component';
 import { LoginComponent } from './page_components/login/login.component';
 import { RegisterComponent } from './page_components/register/register.component';
 import { ErrorInterceptor } from './helpers/error.interceptor';
-import { fakeBackendProvider } from './helpers/fake-backend';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
+import { AlertComponent } from './alert_components/alert/alert.component';
+
+import { fakeBackendProvider } from './helpers/fake-backend';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
