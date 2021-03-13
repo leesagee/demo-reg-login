@@ -61,5 +61,12 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 
 
 /***************************************************************************************************
+ * Core JS is to allow not yet supported features to have support by Angular
+ * Allows support across all major browsers
+ */
+ import 'core-js/features/reflect';
+
+
+/***************************************************************************************************
  * APPLICATION IMPORTS
  */
