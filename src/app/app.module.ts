@@ -12,8 +12,6 @@ import { ErrorInterceptor } from './helpers/error.interceptor';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { AlertComponent } from './alert_components/alert/alert.component';
 
-import { fakeBackendProvider } from './helpers/fake-backend';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,8 +30,6 @@ import { fakeBackendProvider } from './helpers/fake-backend';
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
      
-    // provider used to create fake backend
-    fakeBackendProvider
   ],
   bootstrap: [AppComponent]
 })
