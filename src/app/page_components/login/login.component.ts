@@ -1,12 +1,9 @@
-
-
 import { AlertService } from '@/services/alert.service';
 import { AuthenticationService } from '@/services/authentication.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
-
 
 @Component({
   selector: 'app-login',
@@ -43,7 +40,7 @@ export class LoginComponent implements OnInit {
   }
 
   // convenience getter for easy access to form fields
-  get f() { return this.loginForm.controls; }
+  get myForm() { return this.loginForm.controls; }
 
   onSubmit() {
       this.submitted = true;
@@ -57,7 +54,7 @@ export class LoginComponent implements OnInit {
       }
 
       this.loading = true;
-      this.authenticationService.login(this.f.username.value, this.f.password.value)
+      this.authenticationService.login(this.myForm.username.value, this.myForm.password.value)
           .pipe(first())
           .subscribe(
               data => {

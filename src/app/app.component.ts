@@ -9,7 +9,7 @@ import { AuthenticationService } from './services/authentication.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'demo-one';
+  title = 'reg-demo';
   currentUser: User;
   constructor(
     private router: Router,

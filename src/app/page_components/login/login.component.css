@@ -1,0 +1,47 @@
+body {
+    padding-top: 4rem;
+}
+
+.container {
+    width: 25rem;
+    padding: 0.7rem;
+    margin: auto;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px 5px #888888;
+}
+
+h2 {
+    text-align: center;
+    font: 2em "Ubuntu", sans-serif;
+}
+
+form {
+    text-align: center;
+    font: 1em "Ubuntu", sans-serif;
+    padding-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    font-size: large;
+}
+
+input {
+    font: 1em "Ubuntu", sans-serif;
+}
+
+label {
+    text-align: left;
+    padding-right: 1rem;
+}
+
+button {
+    margin-top: 2rem;
+    margin-right: 4rem;
+    font: medium "Ubuntu", sans-serif;
+}
+
+.invalid-feedback {
+    color: red;
+    font-size: medium;
+}

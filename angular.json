@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "demo-one": {
+    "reg-demo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/demo-one",
+            "outputPath": "dist/reg-demo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,19 +65,19 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "demo-one:build",
+            "browserTarget": "reg-demo:build",
             "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
-              "browserTarget": "demo-one:build:production"
+              "browserTarget": "reg-demo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "demo-one:build"
+            "browserTarget": "reg-demo:build"
           }
         },
         "test": {
@@ -114,16 +114,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "demo-one:serve"
+            "devServerTarget": "reg-demo:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "demo-one:serve:production"
+              "devServerTarget": "reg-demo:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "demo-one"
+  "defaultProject": "reg-demo"
 }

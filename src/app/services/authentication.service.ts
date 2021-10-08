@@ -4,7 +4,6 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { User } from '../models/user';
 
-
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
     private currentUserSubject: BehaviorSubject<User>;
@@ -22,7 +21,7 @@ export class AuthenticationService {
     login(username, password) {
         return this.http.post<any>('http://localhost:8080/api/v1/users/authenticate', { username, password })
             .pipe(map(user => {
-                // store user details and jwt token in local storage to keep user logged in between page refreshes
+                // keeps user logged in between page refreshes - store user details and jwt token in local storage
                 localStorage.setItem('currentUser', JSON.stringify(user));
                 this.currentUserSubject.next(user);
                 return user;
@@ -30,7 +29,7 @@ export class AuthenticationService {
     }
 
     logout() {
-        // remove user from local storage and set current user to null
+        // remove current user from local storage and set to null
         localStorage.removeItem('currentUser');
         this.currentUserSubject.next(null);
     }
